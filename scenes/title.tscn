@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bpjs7fkigppme"]
+
+[ext_resource type="Script" uid="uid://cl867ox4atuuh" path="res://scenes/title.gd" id="1_pyl7j"]
+[ext_resource type="FontFile" uid="uid://cl4nvpwcom8jn" path="res://fonts/Crackman.otf" id="2_b3w7a"]
+[ext_resource type="Texture2D" uid="uid://b6d5lx6vgk3kd" path="res://graphics/player/player_simple.png" id="3_4rr2b"]
+[ext_resource type="FontFile" uid="uid://qc0pmix87qoa" path="res://fonts/Better VCR 9.0.1.ttf" id="4_yql1r"]
+
+[node name="Title" type="Control" unique_id=621193172]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pyl7j")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1040298861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3882353, 0.23529412, 0.39607844, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1184565752]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.5
+offset_top = -84.5
+offset_right = 352.5
+offset_bottom = -250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_b3w7a")
+theme_override_font_sizes/font_size = 140
+text = "Car Game"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=85714993]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_4rr2b")
+
+[node name="Label2" type="Label" parent="." unique_id=311561809]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = 250.0
+offset_right = 59.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_yql1r")
+theme_override_font_sizes/font_size = 30
+text = "High Score: ???"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=2104030428]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -206.0
+offset_top = -125.0
+offset_right = 207.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_yql1r")
+theme_override_font_sizes/font_size = 25
+text = "press \"space\" to start"

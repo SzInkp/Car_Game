@@ -1,0 +1,24 @@
+extends CharacterBody2D
+
+var direction:Vector2 = Vector2.ZERO
+var speed:int = 100
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _physics_process(_delta: float) -> void:
+	direction = Input.get_vector("left","right","up","down")
+	velocity = direction * speed
+	animation()
+	move_and_slide()
+
+
+func animation():
+	if direction:
+		$AnimatedSprite2D.flip_h = direction.x > 0
+		if direction.x != 0:
+			$AnimatedSprite2D.animation = "left"
+		else:
+			$AnimatedSprite2D.animation = "up" if direction.y < 0 else "down"
+		if not $AnimatedSprite2D.is_playing():
+			$AnimatedSprite2D.play()
+	else:
+		$AnimatedSprite2D.frame = 0
